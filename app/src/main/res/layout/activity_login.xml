@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/verdePrincipal"
+    tools:context=".Login">
+
+    <LinearLayout
+        android:id="@+id/layoutLogin"
+        android:layout_width="340dp"
+        android:layout_height="711dp"
+        android:layout_margin="30dp"
+        android:background="@color/blanco"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="50dp"
+
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="629dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="INICIA SESIÓN"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="BIENVENIDO"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="32sp" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <EditText
+                        android:id="@+id/et_correo1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:ems="10"
+                        android:fontFamily="@font/roboto"
+                        android:hint="Dirección de email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/grisOscuro"
+                        android:textColorHint="@color/gris" />
+
+                </TableRow>
+
+                <EditText
+                    android:id="@+id/et_contra1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:ems="10"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:textColor="@color/grisOscuro"
+                    android:textColorHint="@color/gris" />
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_ingresarsesion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/boton_principal_morado"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Iniciar sesión"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="14sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:paddingTop="8dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_ingresarsesionGoogle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/boton_secundario_morado"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Iniciar sesión con Google"
+                        android:textAllCaps="false"
+                        android:textColor="@color/moradoPrincipal"
+                        android:textSize="14sp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp">
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_recuperar_contra"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@color/blanco"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="¿Olvidaste tu contraseña?"
+                        android:textAllCaps="false"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="230dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_registrarsel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:background="@color/blanco"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="Crea una cuenta"
+                        android:textAllCaps="false"
+                        android:textColor="@color/moradoPrincipal"
+                        android:textSize="14sp" />
+
+                </TableRow>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
