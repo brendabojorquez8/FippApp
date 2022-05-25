@@ -44,7 +44,7 @@
                     android:fontFamily="@font/roboto_bold"
                     android:text="CREA UNA CUENTA"
                     android:textColor="@color/grisOscuro"
-                    android:textSize="32sp" />
+                    android:textSize="28sp" />
 
                 <TableRow
                     android:layout_width="match_parent"

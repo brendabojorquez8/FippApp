@@ -10,10 +10,10 @@
 
     <ImageView
         android:id="@android:id/empty"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="150dp"
+        android:layout_height="88dp"
         android:layout_gravity="center"
-        android:scaleType="center"
+        android:layout_margin="300dp"
         android:src="@drawable/logoblancobienvenida" />
 
 </LinearLayout>
