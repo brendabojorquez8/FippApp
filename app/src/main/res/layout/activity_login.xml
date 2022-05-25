@@ -91,7 +91,7 @@
                         android:fontFamily="@font/roboto_bold"
                         android:text="Iniciar sesión"
                         android:textAllCaps="false"
-                        android:textColor="@android:color/white"
+                        android:textColor="@color/blanco"
                         android:textSize="14sp" />
 
 
