@@ -52,9 +52,56 @@
     <LinearLayout
         android:id="@+id/layoutCirculos"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="25dp"
         android:orientation="vertical"
-        android:background="@color/grisClaro">
+        android:background="@color/grisClaro"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBarIngresosVista"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="30dp"
+            android:progress="50"
+            android:progressBackgroundTint="@color/gris"
+            android:progressTint="@color/verdePrincipal"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarGastosVista"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:progress="30"
+            android:progressBackgroundTint="@color/gris"
+            android:progressTint="@color/rojo"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarInversionVista"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:progress="10"
+            android:progressBackgroundTint="@color/gris"
+            android:progressTint="@color/azul"/>
+
+        <ProgressBar
+            android:id="@+id/progressBarAhorroVista"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:progress="25"
+            android:progressBackgroundTint="@color/gris"
+            android:progressTint="@color/moradoPrincipal"/>
 
     </LinearLayout>
 
@@ -119,7 +166,61 @@
                     android:textAllCaps="true"
                     android:textColor="@color/grisOscuro"
                     android:textSize="24sp" />
-                <!--Aquí va la barra-->
+
+                <ProgressBar
+                    android:id="@+id/progressBarIngresos"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:progress="50"
+                    android:progressBackgroundTint="@color/verdePrincipal"
+                    android:progressTint="@color/verdePrincipal"/>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="1,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="10,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="20,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                </TableRow>
 
             </LinearLayout>
 
@@ -169,11 +270,65 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="10,000"
+                    android:text="6,000"
                     android:textAllCaps="true"
                     android:textColor="@color/grisOscuro"
                     android:textSize="24sp" />
-                <!--Aquí va la barra-->
+
+                <ProgressBar
+                    android:id="@+id/progressBarGastos"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:progress="30"
+                    android:progressBackgroundTint="@color/rojo"
+                    android:progressTint="@color/rojo"/>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="1,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="10,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="20,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                </TableRow>
 
             </LinearLayout>
 
@@ -223,11 +378,65 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="10,000"
+                    android:text="2,000"
                     android:textAllCaps="true"
                     android:textColor="@color/grisOscuro"
                     android:textSize="24sp" />
-                <!--Aquí va la barra-->
+
+                <ProgressBar
+                    android:id="@+id/progressBarInversion"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:progress="10"
+                    android:progressBackgroundTint="@color/azul"
+                    android:progressTint="@color/azul"/>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="1,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="10,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="20,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                </TableRow>
 
             </LinearLayout>
 
@@ -277,11 +486,65 @@
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="3dp"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="10,000"
+                    android:text="5,000"
                     android:textAllCaps="true"
                     android:textColor="@color/grisOscuro"
                     android:textSize="24sp" />
-                <!--Aquí va la barra-->
+
+                <ProgressBar
+                    android:id="@+id/progressBarAhorros"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:progress="25"
+                    android:progressBackgroundTint="@color/moradoPrincipal"
+                    android:progressTint="@color/moradoPrincipal"/>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="1,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="10,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="20,000"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="12sp" />
+
+                </TableRow>
 
             </LinearLayout>
 

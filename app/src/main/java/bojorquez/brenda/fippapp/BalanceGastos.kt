@@ -1,5 +1,6 @@
 package bojorquez.brenda.fippapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,32 @@ class BalanceGastos : AppCompatActivity() {
             )
         )
         graphView.addSeries(series)
+
+        btn_Ingresos.setOnClickListener {
+            val intent: Intent = Intent(this, BalanceIngresos::class.java)
+            startActivity(intent)
+        }
+
+        btn_home.setOnClickListener {
+            val intent: Intent = Intent(this, Home::class.java)
+            startActivity(intent)
+        }
+
+
+        btn_clasificacion.setOnClickListener {
+            val intent: Intent = Intent(this, ClasificacionGastos::class.java)
+            startActivity(intent)
+        }
+
+        btn_clategorías.setOnClickListener {
+            val intent: Intent = Intent(this, CategoriasGastos::class.java)
+            startActivity(intent)
+        }
+
+        btn_fijos.setOnClickListener {
+            val intent: Intent = Intent(this, GastosFijos::class.java)
+            startActivity(intent)
+        }
 
     }
 }

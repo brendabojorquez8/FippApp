@@ -136,34 +136,528 @@
             android:id="@+id/idGraphView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true" />
+            android:layout_alignParentTop="true"/>
 
     </LinearLayout>
 
-    <!--El siguiente layout es para la barra-->
     <LinearLayout
         android:id="@+id/layout_barra"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="40dp"
         android:orientation="vertical"
-        android:background="@color/grisClaro">
+        android:background="@color/grisClaro"
+        android:layout_marginTop="10dp">
+
+        <ProgressBar
+            android:id="@+id/progressBarGastos"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:progress="30"
+            android:progressBackgroundTint="@color/rojo"
+            android:progressTint="@color/rojo"/>
+
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="1,000"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="10,000"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="20,000"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="12sp" />
+
+        </TableRow>
 
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/layoutLogin"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:background="@color/blanco"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:layout_height="200dp"
+            android:orientation="vertical">
 
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
 
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Fecha"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Categoría"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Importe"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp">
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="26-may"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="50.00"
+                    android:textAllCaps="true"
+                    android:textAlignment="center"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+            </TableRow>
+
+        </LinearLayout>
     </ScrollView>
 
     <LinearLayout
