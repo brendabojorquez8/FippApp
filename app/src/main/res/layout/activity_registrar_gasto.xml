@@ -1,6 +1,380 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    tools:context=".RegistrarGasto">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageButton
+        android:id="@+id/btn_dismiss"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="right"
+        android:background="@drawable/boton_principal_morado"
+        android:src="@drawable/minimizar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Gasto"
+        android:textAllCaps="true"
+        android:textColor="@color/grisOscuro"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="registrar gasto"
+        android:textAllCaps="true"
+        android:textColor="@color/grisOscuro"
+        android:textSize="28sp" />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp">
+
+        <EditText
+            android:id="@+id/cantidad_ingreso"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:ems="10"
+            android:fontFamily="@font/roboto"
+            android:hint="Cantidad de gasto..."
+            android:inputType="numberDecimal"
+            android:textColor="@color/grisOscuro"
+            android:textColorHint="@color/gris"
+            android:background="@color/grisClaro"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_mxn"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:background="@drawable/boton_principal_morado"
+            android:fontFamily="@font/roboto_bold"
+            android:text="mxn"
+            android:textAllCaps="true"
+            android:textColor="@color/blanco"
+            android:textSize="14sp" />
+
+    </TableRow>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="categoría"
+        android:textAllCaps="true"
+        android:textColor="@color/grisOscuro"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="376dp"
+        android:layout_margin="15dp"
+        android:orientation="vertical"
+        android:background="@color/gris">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/layoutCat1"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_secciones"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/auto"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Uber"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCat2"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_secciones"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/auto"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Uber"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/layoutCat3"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_secciones"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/auto"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Uber"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCat4"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_secciones"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/auto"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Uber"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/layoutCat5"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_secciones"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/auto"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Uber"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutCat6"
+                android:layout_width="150dp"
+                android:layout_height="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/layout_secciones"
+                android:elevation="2dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/auto"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Uber"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/roboto"
+                    android:text="Transporte"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+        </TableRow>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_registrarGasto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="25dp"
+        android:background="@drawable/boton_principal_morado"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Registrar Gasto"
+        android:textAllCaps="false"
+        android:textColor="@color/blanco"
+        android:textSize="14sp" />
+
+</LinearLayout>

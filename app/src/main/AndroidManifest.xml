@@ -24,6 +24,8 @@
         <activity android:name=".Home"/>
         <activity android:name=".BalanceIngresos" />
         <activity android:name=".BalanceGastos" />
+        <activity android:name=".RegistrarIngreso" />
+        <activity android:name=".RegistrarGasto" />
     </application>
 
 </manifest>
