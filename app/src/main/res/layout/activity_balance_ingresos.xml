@@ -101,6 +101,29 @@
 
     </TableRow>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="ingresos"
+        android:textAllCaps="true"
+        android:textColor="#505050"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Balance"
+        android:textAllCaps="true"
+        android:textColor="@color/grisOscuro"
+        android:textSize="30sp" />
+
     <!--El siguiente layout es para la gráfica-->
     <LinearLayout
         android:id="@+id/layout_grafica"
@@ -130,7 +153,7 @@
     <ScrollView
         android:id="@+id/layoutLogin"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:background="@color/blanco"
         android:orientation="vertical">
 
