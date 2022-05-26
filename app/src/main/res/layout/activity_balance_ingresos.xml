@@ -1,6 +1,218 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/grisClaro"
+    tools:context=".BalanceIngresos">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@android:id/empty"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:src="@drawable/logoverde"/>
+
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_mes"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/boton_mini_verde"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Mes"
+                android:textColor="@color/blanco"
+                android:textSize="14sp"
+                android:layout_marginLeft="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_semana"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Semana"
+                android:textColor="@color/grisOscuro"
+                android:textSize="14sp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="50dp"/>
+        </TableRow>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_balance"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/boton_mini_verde2"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Balance"
+                android:textColor="@color/blanco"
+                android:textSize="10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clasificacion"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Clasificación"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fijos"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Fijos"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clategorías"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Categorías"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp"/>
+        </TableRow>
+
+    </TableRow>
+
+    <!--El siguiente layout es para la gráfica-->
+    <LinearLayout
+        android:id="@+id/layout_grafica"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:background="@color/grisClaro">
+
+        <com.jjoe64.graphview.GraphView
+            android:id="@+id/idGraphView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+    </LinearLayout>
+
+    <!--El siguiente layout es para la barra-->
+    <LinearLayout
+        android:id="@+id/layout_barra"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:background="@color/grisClaro">
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layoutLogin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/blanco"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Ingresos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/ingresosverde"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Ingresos"
+            android:textColor="@color/verdePrincipal"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_gastos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/gastos"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Gastos"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/home"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Home"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_portafolio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/portafolio"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Portafolio"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ahorro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/ahorro"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Ahorro"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+</LinearLayout>
