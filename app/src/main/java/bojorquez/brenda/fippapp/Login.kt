@@ -21,11 +21,6 @@ class Login : AppCompatActivity() {
             valida_ingreso()
         }
 
-        btn_recuperar_contra.setOnClickListener {
-            val intent: Intent = Intent(this, Recuperacion::class.java)
-            startActivity(intent)
-        }
-
         btn_registrarsel.setOnClickListener {
             val intent: Intent = Intent(this, CrearCuenta::class.java)
             startActivity(intent)

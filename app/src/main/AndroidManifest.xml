@@ -26,6 +26,14 @@
         <activity android:name=".BalanceGastos" />
         <activity android:name=".RegistrarIngreso" />
         <activity android:name=".RegistrarGasto" />
+        <activity android:name=".CategoriasGastos" />
+        <activity android:name=".CategoriasIngresos" />
+        <activity android:name=".ClasificacionGastos" />
+        <activity android:name=".ClasificacionIngresos" />
+        <activity android:name=".GastosFijos" />
+        <activity android:name=".IngresosFijos" />
+        <activity android:name=".RegistrarCategoriasIngresos" />
+        <activity android:name=".RegistrarCategoriasGastos" />
     </application>
 
 </manifest>
