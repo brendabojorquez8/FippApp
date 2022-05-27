@@ -1,7 +1,805 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/grisClaro"
+    tools:context=".BalanceIngresos">
 
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@android:id/empty"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:src="@drawable/logoverde"/>
+
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_mes"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/boton_mini_verde"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Mes"
+                android:textColor="@color/blanco"
+                android:textSize="14sp"
+                android:layout_marginLeft="25dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_semana"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Semana"
+                android:textColor="@color/grisOscuro"
+                android:textSize="14sp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="50dp"/>
+        </TableRow>
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TableRow>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_balance"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Balance"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clasificacion"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/boton_mini_verde"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Clasificación"
+                android:textColor="@color/blanco"
+                android:textSize="10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_fijos"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Fijos"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clategorías"
+                android:layout_width="10dp"
+                android:layout_height="30dp"
+                android:layout_weight="2"
+                android:background="@color/grisClaro"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Categorías"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp"/>
+        </TableRow>
+
+    </TableRow>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="15dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="ingresos"
+        android:textAllCaps="true"
+        android:textColor="#505050"
+        android:textSize="10sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="clasificación"
+        android:textAllCaps="true"
+        android:textColor="@color/grisOscuro"
+        android:textSize="30sp" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="430dp"
+        android:background="@color/blanco"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="ingresos extra"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto"
+                android:text="comisión"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="450"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="24sp" />
+
+            <!--El siguiente layout es para la barra-->
+            <LinearLayout
+                android:id="@+id/layout_barra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/blanco">
+
+                <ProgressBar
+                    android:id="@+id/progressBarIngresos"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="80dp"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:progress="100"
+                    android:progressTint="@color/verdePrincipal"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="25-may"
+                    android:textAllCaps="true"
+                    android:textColor="@color/grisOscuro"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="ingresos extra"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="10sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="quincena"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="4,500"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="24sp" />
+
+                    <!--El siguiente layout es para la barra-->
+                    <LinearLayout
+                        android:id="@+id/layout_barra2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/blanco">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarIngresos2"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="80dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:progress="100"
+                            android:progressTint="@color/gris"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="15-may"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="comisión"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="5dp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="4,500"
+                        android:textAllCaps="true"
+                        android:textColor="@color/grisOscuro"
+                        android:textSize="24sp" />
+
+                    <!--El siguiente layout es para la barra-->
+                    <LinearLayout
+                        android:id="@+id/layout_barra3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/blanco">
+
+                        <ProgressBar
+                            android:id="@+id/progressBarIngresos3"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="80dp"
+                            android:layout_height="10dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="5dp"
+                            android:progress="100"
+                            android:progressTint="@color/gris"/>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="3dp"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="20-may"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="ingresos"
+                android:textAllCaps="true"
+                android:textColor="#505050"
+                android:textSize="10sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Mayor a menor"
+                android:textAllCaps="true"
+                android:textColor="@color/grisOscuro"
+                android:textSize="24sp" />
+
+            <ScrollView
+                android:id="@+id/layoutLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:background="@color/blanco"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/layout_secciones"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/comision"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="comisión"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:text="Trabajo"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/blanco"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="80dp"
+                                android:layout_height="10dp"
+                                android:progress="100"
+                                android:progressTint="@color/verdePrincipal"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="300"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grisOscuro"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/layout_secciones"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/comision"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="comisión"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:text="Trabajo"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/blanco"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="80dp"
+                                android:layout_height="10dp"
+                                android:progress="100"
+                                android:progressTint="@color/verdePrincipal"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="300"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grisOscuro"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/layout_secciones"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/comision"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="comisión"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:text="Trabajo"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/blanco"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="80dp"
+                                android:layout_height="10dp"
+                                android:progress="100"
+                                android:progressTint="@color/verdePrincipal"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="300"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grisOscuro"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/layout_secciones"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/comision"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="comisión"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:text="Trabajo"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/blanco"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="80dp"
+                                android:layout_height="10dp"
+                                android:progress="100"
+                                android:progressTint="@color/verdePrincipal"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="300"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grisOscuro"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/layout_secciones"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/comision"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto_bold"
+                            android:text="comisión"
+                            android:textAllCaps="true"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/roboto"
+                            android:text="Trabajo"
+                            android:textAllCaps="false"
+                            android:textColor="@color/grisOscuro"
+                            android:textSize="10sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:background="@color/blanco"
+                            android:gravity="center">
+
+                            <ProgressBar
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="80dp"
+                                android:layout_height="10dp"
+                                android:progress="100"
+                                android:progressTint="@color/verdePrincipal"/>
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="3dp"
+                                android:fontFamily="@font/roboto_bold"
+                                android:text="300"
+                                android:textAllCaps="true"
+                                android:textColor="@color/grisOscuro"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/blanco">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Ingresos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/ingresosverde"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Ingresos"
+            android:textColor="@color/verdePrincipal"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_gastos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/gastos"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Gastos"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/home"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Home"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_portafolio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/portafolio"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Portafolio"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_ahorro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_weight="2"
+            android:background="@color/blanco"
+            android:drawableTop="@drawable/ahorro"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Ahorro"
+            android:textColor="@color/grisOscuro"
+            android:textSize="10sp" />
+
+    </LinearLayout>
 </LinearLayout>
