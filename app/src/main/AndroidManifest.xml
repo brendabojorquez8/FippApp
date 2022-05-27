@@ -36,6 +36,7 @@
         <activity android:name=".RegistrarCategoriasGastos" />
         <activity android:name=".RegistrarIngresosFijos" />
         <activity android:name=".RegistrosGastosFijos" />
+
     </application>
 
 </manifest>
