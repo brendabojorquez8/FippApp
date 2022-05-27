@@ -13,8 +13,8 @@ class GastosFijos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gastos_fijos)
 
-        btn_gastos.setOnClickListener {
-            val intent: Intent = Intent(this, BalanceGastos::class.java)
+        btn_Ingresos.setOnClickListener {
+            val intent: Intent = Intent(this, BalanceIngresos::class.java)
             startActivity(intent)
         }
 
@@ -24,17 +24,17 @@ class GastosFijos : AppCompatActivity() {
         }
 
         btn_clasificacion.setOnClickListener {
-            val intent: Intent = Intent(this, ClasificacionIngresos::class.java)
+            val intent: Intent = Intent(this, ClasificacionGastos::class.java)
             startActivity(intent)
         }
 
         btn_clategorías.setOnClickListener {
-            val intent: Intent = Intent(this, CategoriasIngresos::class.java)
+            val intent: Intent = Intent(this, CategoriasGastos::class.java)
             startActivity(intent)
         }
 
         btn_fijos.setOnClickListener {
-            val intent: Intent = Intent(this, IngresosFijos::class.java)
+            val intent: Intent = Intent(this, GastosFijos::class.java)
             startActivity(intent)
         }
 
