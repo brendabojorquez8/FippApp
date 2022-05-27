@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grisClaro"
+    android:background="@color/blanco"
     tools:context=".BalanceIngresos">
 
     <TableRow
@@ -37,7 +37,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Semana"
                 android:textColor="@color/grisOscuro"
@@ -59,7 +59,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Balance"
                 android:textColor="@color/grisOscuro"
@@ -81,7 +81,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Fijos"
                 android:textColor="@color/grisOscuro"
@@ -92,7 +92,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Categorías"
                 android:textColor="@color/grisOscuro"
@@ -108,7 +108,7 @@
         android:layout_marginTop="5dp"
         android:layout_marginLeft="15dp"
         android:fontFamily="@font/roboto_bold"
-        android:text="ingresos"
+        android:text="gastos"
         android:textAllCaps="true"
         android:textColor="#505050"
         android:textSize="10sp" />
@@ -142,7 +142,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="ingresos extra"
+                android:text="Cerca del límite"
                 android:textAllCaps="true"
                 android:textColor="@color/grisOscuro"
                 android:textSize="10sp" />
@@ -154,7 +154,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/roboto"
-                android:text="comisión"
+                android:text="UBER"
                 android:textAllCaps="true"
                 android:textColor="@color/grisOscuro"
                 android:textSize="10sp" />
@@ -210,7 +210,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="ingresos extra"
+                android:text="excediendo el límite"
                 android:textAllCaps="true"
                 android:textColor="@color/grisOscuro"
                 android:textSize="10sp" />
@@ -232,7 +232,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="15dp"
                         android:fontFamily="@font/roboto"
-                        android:text="quincena"
+                        android:text="Uber"
                         android:textAllCaps="true"
                         android:textColor="@color/grisOscuro"
                         android:textSize="10sp" />
@@ -295,7 +295,7 @@
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="15dp"
                         android:fontFamily="@font/roboto"
-                        android:text="comisión"
+                        android:text="UBER"
                         android:textAllCaps="true"
                         android:textColor="@color/grisOscuro"
                         android:textSize="10sp" />
@@ -355,7 +355,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="15dp"
                 android:fontFamily="@font/roboto_bold"
-                android:text="ingresos"
+                android:text="gastos"
                 android:textAllCaps="true"
                 android:textColor="#505050"
                 android:textSize="10sp" />
@@ -375,7 +375,7 @@
                 android:id="@+id/layoutLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
-                android:background="@color/blanco"
+                android:background="@color/grisClaro"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -397,7 +397,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/comision"
+                            android:src="@drawable/auto"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"/>
 
@@ -406,7 +406,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="comisión"
+                            android:text="UBER"
                             android:textAllCaps="true"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -416,7 +416,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto"
-                            android:text="Trabajo"
+                            android:text="Transporte"
                             android:textAllCaps="false"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -465,7 +465,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/comision"
+                            android:src="@drawable/auto"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"/>
 
@@ -474,7 +474,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="comisión"
+                            android:text="UBER"
                             android:textAllCaps="true"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -484,7 +484,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto"
-                            android:text="Trabajo"
+                            android:text="Transporte"
                             android:textAllCaps="false"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -533,7 +533,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/comision"
+                            android:src="@drawable/auto"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"/>
 
@@ -542,7 +542,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="comisión"
+                            android:text="UBER"
                             android:textAllCaps="true"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -552,7 +552,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto"
-                            android:text="Trabajo"
+                            android:text="Transporte"
                             android:textAllCaps="false"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -601,7 +601,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/comision"
+                            android:src="@drawable/auto"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"/>
 
@@ -610,7 +610,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="comisión"
+                            android:text="UBER"
                             android:textAllCaps="true"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -620,7 +620,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto"
-                            android:text="Trabajo"
+                            android:text="Transporte"
                             android:textAllCaps="false"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -669,7 +669,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/comision"
+                            android:src="@drawable/auto"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"/>
 
@@ -678,7 +678,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="comisión"
+                            android:text="UBER"
                             android:textAllCaps="true"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -688,7 +688,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto"
-                            android:text="Trabajo"
+                            android:text="Transporte"
                             android:textAllCaps="false"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -737,7 +737,7 @@
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:src="@drawable/comision"
+                            android:src="@drawable/auto"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"/>
 
@@ -746,7 +746,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto_bold"
-                            android:text="comisión"
+                            android:text="UBER"
                             android:textAllCaps="true"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />
@@ -756,7 +756,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:fontFamily="@font/roboto"
-                            android:text="Trabajo"
+                            android:text="Transporte"
                             android:textAllCaps="false"
                             android:textColor="@color/grisOscuro"
                             android:textSize="10sp" />

@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/grisClaro"
+    android:background="@color/blanco"
     tools:context=".BalanceIngresos">
 
     <TableRow
@@ -37,7 +37,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Semana"
                 android:textColor="@color/grisOscuro"
@@ -70,7 +70,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Clasificación"
                 android:textColor="@color/grisOscuro"
@@ -81,7 +81,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Fijos"
                 android:textColor="@color/grisOscuro"
@@ -92,7 +92,7 @@
                 android:layout_width="10dp"
                 android:layout_height="30dp"
                 android:layout_weight="2"
-                android:background="@color/grisClaro"
+                android:background="@color/blanco"
                 android:fontFamily="@font/roboto_bold"
                 android:text="Categorías"
                 android:textColor="@color/grisOscuro"
@@ -130,7 +130,7 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:orientation="vertical"
-        android:background="@color/grisClaro">
+        android:background="@color/blanco">
 
         <com.jjoe64.graphview.GraphView
             android:id="@+id/idGraphView"
@@ -146,7 +146,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="vertical"
-        android:background="@color/grisClaro"
+        android:background="@color/blanco"
         android:layout_marginTop="10dp">
 
         <ProgressBar
@@ -210,7 +210,7 @@
         android:id="@+id/layoutLogin"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@color/blanco"
+        android:background="@color/grisClaro"
         android:orientation="vertical">
 
         <LinearLayout

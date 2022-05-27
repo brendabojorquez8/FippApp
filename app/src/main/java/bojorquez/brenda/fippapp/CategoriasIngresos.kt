@@ -38,7 +38,7 @@ class CategoriasIngresos : AppCompatActivity() {
             startActivity(intent)
         }
 
-        btn_registrarCatIngreso.setOnClickListener {
+        btn_registrarGastosFijo.setOnClickListener {
             val intent: Intent = Intent(this, RegistrarCategoriasIngresos::class.java)
             startActivity(intent)
         }
